@@ -45,7 +45,7 @@ def load_data():
         conn = st.connection("gsheets", type=GSheetsConnection)
 
         # Fetch the spreadsheet ID from secrets instead of hardcoding
-        spreadsheet_id = st.secrets["connections"]["gsheets"]["spreadsheet_id"]
+        spreadsheet_id = st.secrets["gsheets"]["spreadsheet_id"]
 
         # Read the data using that secret ID
         data = conn.read(spreadsheet=spreadsheet_id)
