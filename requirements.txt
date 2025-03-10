@@ -1,5 +1,5 @@
 streamlit>=1.28.0
-st-gsheets-connection>=0.1.5
+st-gsheets-connection
 seaborn
 matplotlib
 pandas
