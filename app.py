@@ -43,8 +43,8 @@ def load_data():
     try:
         # Create a connection to the Google Sheet
         conn = st.connection("gsheets", type=GSheetsConnection)
-        # Read the data (defaults to the first worksheet)
-        data = conn.read()
+        # Read with explicit spreadsheet ID
+        data = conn.read(spreadsheet="11RW6wCYO2orcrHP6_lIUHFZRkyWTWQ12lqHi3N4gn1A")
         st.success("Data successfully loaded from Google Sheet using secrets!")
     except Exception as e:
         st.warning("Error loading Google Sheet. Falling back to Seaborn's Titanic dataset.")
